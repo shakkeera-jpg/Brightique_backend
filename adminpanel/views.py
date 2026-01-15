@@ -378,7 +378,6 @@ class AdminSendNotificationAPIView(APIView):
     permission_classes = [IsAdminUser]
 
     def post(self, request):
-        print("🔥 ADMIN SEND NOTIFICATION HIT")
         user_id = request.data.get("user_id")
         title = request.data.get("title")
         message = request.data.get("message")

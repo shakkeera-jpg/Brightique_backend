@@ -16,7 +16,7 @@ class Order(models.Model):
         related_name="orders"
     )
 
-    amount = models.IntegerField()  # paise
+    amount = models.IntegerField()  
     is_paid = models.BooleanField(default=False)
 
     status = models.CharField(

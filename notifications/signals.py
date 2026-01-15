@@ -25,7 +25,7 @@ def order_created_notification(sender, instance, created, **kwargs):
         f"user_{user.id}",
         {
             "type": "send_notification",
-            "data": {   # ✅ THIS WAS MISSING
+            "data": {  
                 "id": notification.id,
                 "title": notification.title,
                 "message": notification.message,

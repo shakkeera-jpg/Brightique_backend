@@ -29,12 +29,12 @@ class JWTAuthMiddleware(BaseMiddleware):
                 scope["user"] = user
 
             except Exception as e:
-                print("❌ JWT ERROR:", e)
+               
                 scope["user"] = AnonymousUser()
         else:
             scope["user"] = AnonymousUser()
 
-        print("🟢 WS USER:", scope["user"])  # 🔥 DEBUG LINE
+       
         return await super().__call__(scope, receive, send)
 
     @database_sync_to_async
