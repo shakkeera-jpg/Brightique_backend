@@ -30,8 +30,7 @@ class AdminDashboardView(APIView):
         total_products = Product.objects.count()
         total_orders = Order.objects.count()
         total_users = User.objects.count()
-
-       
+        
         in_stock = Product.objects.filter(stock__gt=0).count()
         out_of_stock = Product.objects.filter(stock=0).count()
 
